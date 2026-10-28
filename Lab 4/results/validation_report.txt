@@ -1,0 +1,5 @@
+=== LAB 4 DATA VALIDATION REPORT ===
+
+Schema Range Checks: ALL PASSED.
+
+Label Quality Audit: Found 5 duplicate feature rows with conflicting labels.

@@ -1,0 +1,21 @@
+pipeline:
+  dataset:
+    name: "adult"
+    version: 2
+  split:
+    test_size: 0.30
+    random_state: 72014
+  schema:
+    ranges:
+      age: [17, 90]
+      hours-per-week: [1, 99]
+      capital-gain: [0, 99999]
+      capital-loss: [0, 4356]
+    null_policy: "?"
+  paths:
+    raw_data: "data/raw/adult.csv"
+    train_data: "data/processed/train.csv"
+    test_data: "data/processed/test.csv"
+    preprocessor: "results/preprocessor.joblib"
+    validation_report: "results/validation_report.txt"
+    metrics: "results/metrics.json"

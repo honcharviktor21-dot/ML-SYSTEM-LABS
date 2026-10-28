@@ -1,0 +1,12 @@
+{
+    "LogisticRegression": {
+        "execution_time_sec": 0.01279,
+        "memory_used_mb": 0.332,
+        "emissions_kg_co2": 2.4e-07
+    },
+    "RandomForest": {
+        "execution_time_sec": 0.122595,
+        "memory_used_mb": 0.2852,
+        "emissions_kg_co2": 1.18e-06
+    }
+}

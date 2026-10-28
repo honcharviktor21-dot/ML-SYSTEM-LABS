@@ -1,0 +1,6 @@
+{
+    "engineered_model": {
+        "accuracy": 0.8535,
+        "f1_score": 0.6615
+    }
+}

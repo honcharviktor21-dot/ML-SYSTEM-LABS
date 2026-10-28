@@ -1,0 +1,16 @@
+Initial untrained loss: 2.3026 (Expected ~2.3026)
+
+W=16, LR=0.001 | Final Test Accuracy: 10.19%
+W=16, LR=0.01 | Final Test Accuracy: 10.19%
+W=16, LR=0.1 | Final Test Accuracy: 51.48%
+W=64, LR=0.001 | Final Test Accuracy: 10.19%
+W=64, LR=0.01 | Final Test Accuracy: 10.19%
+W=64, LR=0.1 | Final Test Accuracy: 86.85%
+
+Loss curves saved to results/loss_curves.png
+
+Median Forward Pass Time: 0.0403 ms
+Median Backward Pass Time: 0.0597 ms
+Conclusion: The backward pass dominates time complexity because it necessitates additional matrix transpositions and multiplications to compute gradients for both the weights and the upstream activations.
+Timing chart saved to results/timing_chart.png
+
