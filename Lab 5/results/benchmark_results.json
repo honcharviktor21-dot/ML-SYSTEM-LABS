@@ -1,0 +1,7 @@
+{
+    "eager_median_ms": 95.03309999854537,
+    "traced_median_ms": 88.07260000321548,
+    "contiguous_sum_ms": 0.778649999119807,
+    "non_contiguous_sum_ms": 0.8047999945119955,
+    "contiguity_overhead_ratio": 1.0335837608961005
+}

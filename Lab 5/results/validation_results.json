@@ -1,0 +1,19 @@
+{
+    "custom_grads": {
+        "da": -24.0,
+        "db": 16.0,
+        "dc": 8.0
+    },
+    "torch_grads": {
+        "da": -24.0,
+        "db": 16.0,
+        "dc": 8.0
+    },
+    "numerical_grads": {
+        "da": -23.99999999891378,
+        "db": 16.000000002236447,
+        "dc": 7.999999993124618
+    },
+    "max_absolute_difference": 6.875382041471312e-09,
+    "status": "PASSED"
+}

@@ -1,0 +1,23 @@
+experiment:
+  student_name: "Viktor Honchar"
+  student_id: 72014
+  seed: 72014
+
+engine_test:
+  tolerance: 1.0e-6
+  test_inputs:
+    a: 2.0
+    b: -3.0
+    c: 10.0
+
+moons_training:
+  n_samples: 100
+  noise: 0.1
+  epochs: 30
+  lr: 0.05
+  runs: 5
+
+execution_benchmark:
+  matrix_size: 2000
+  warmup_iters: 5
+  benchmark_iters: 20
