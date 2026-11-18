@@ -1,0 +1,50 @@
+experiment:
+  student_name: "Viktor Honchar"
+  student_id: 72014
+  seed: 72014
+  mlflow_experiment: "Lab6_Training_Pipelines"
+  tracking_uri: "sqlite:///mlflow.db"
+
+data:
+  data_dir: "./data"
+  subset_size: 12000  # Set to null to run all 60,000 images
+
+model:
+  in_channels: 1
+  conv1_channels: 16
+  conv2_channels: 32
+  num_classes: 10
+
+profiler:
+  batch_size: 128
+  num_workers: 2
+
+workers_study:
+  batch_size: 128
+  worker_counts: [0, 1, 2, 4, 8]
+
+batch_study:
+  batch_sizes: [32, 64, 128, 256, 512]
+  epochs: 5
+  lr: 0.001
+
+optim_sched_study:
+  batch_size: 128
+  epochs: 10
+  lr_adam: 0.001
+  lr_sgd: 0.02
+  momentum: 0.9
+
+grad_accum:
+  epochs: 5
+  lr: 0.001
+  large_batch: 256
+  micro_batch: 64
+  accum_steps: 4
+
+checkpoint_resume:
+  batch_size: 128
+  lr: 0.001
+  interrupt_epoch: 3
+  total_epochs: 6
+  checkpoint_path: "results/checkpoint_epoch3.pt"

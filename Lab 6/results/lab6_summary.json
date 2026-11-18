@@ -1,0 +1,165 @@
+{
+    "profiler_shares_pct": {
+        "data_loading": 52.68,
+        "forward_pass": 17.55,
+        "backward_pass": 27.36,
+        "optimizer_step": 2.41
+    },
+    "workers_study": [
+        {
+            "num_workers": 0,
+            "epoch_time_sec": 14.1577,
+            "throughput_samples_sec": 847.6
+        },
+        {
+            "num_workers": 1,
+            "epoch_time_sec": 17.437,
+            "throughput_samples_sec": 688.2
+        },
+        {
+            "num_workers": 2,
+            "epoch_time_sec": 16.4249,
+            "throughput_samples_sec": 730.6
+        },
+        {
+            "num_workers": 4,
+            "epoch_time_sec": 20.3797,
+            "throughput_samples_sec": 588.8
+        },
+        {
+            "num_workers": 8,
+            "epoch_time_sec": 33.9923,
+            "throughput_samples_sec": 353.0
+        }
+    ],
+    "batch_study": [
+        {
+            "batch_size": 32,
+            "throughput_samples_sec": 729.4,
+            "peak_memory_mb": 0.54,
+            "final_accuracy": 0.8835
+        },
+        {
+            "batch_size": 64,
+            "throughput_samples_sec": 883.3,
+            "peak_memory_mb": 0.54,
+            "final_accuracy": 0.888
+        },
+        {
+            "batch_size": 128,
+            "throughput_samples_sec": 872.2,
+            "peak_memory_mb": 0.54,
+            "final_accuracy": 0.8815
+        },
+        {
+            "batch_size": 256,
+            "throughput_samples_sec": 1015.9,
+            "peak_memory_mb": 0.56,
+            "final_accuracy": 0.8595
+        },
+        {
+            "batch_size": 512,
+            "throughput_samples_sec": 1066.7,
+            "peak_memory_mb": 0.6,
+            "final_accuracy": 0.8375
+        }
+    ],
+    "optim_sched_study": [
+        {
+            "optimizer": "Adam",
+            "scheduler": "StepLR",
+            "epoch_5_acc": 0.873,
+            "final_epoch_10_acc": 0.892
+        },
+        {
+            "optimizer": "Adam",
+            "scheduler": "CosineAnnealingLR",
+            "epoch_5_acc": 0.8815,
+            "final_epoch_10_acc": 0.892
+        },
+        {
+            "optimizer": "Adam",
+            "scheduler": "ReduceLROnPlateau",
+            "epoch_5_acc": 0.883,
+            "final_epoch_10_acc": 0.8975
+        },
+        {
+            "optimizer": "SGD+Momentum",
+            "scheduler": "StepLR",
+            "epoch_5_acc": 0.88,
+            "final_epoch_10_acc": 0.889
+        },
+        {
+            "optimizer": "SGD+Momentum",
+            "scheduler": "CosineAnnealingLR",
+            "epoch_5_acc": 0.8805,
+            "final_epoch_10_acc": 0.892
+        },
+        {
+            "optimizer": "SGD+Momentum",
+            "scheduler": "ReduceLROnPlateau",
+            "epoch_5_acc": 0.881,
+            "final_epoch_10_acc": 0.894
+        }
+    ],
+    "grad_accum_study": {
+        "native_256": {
+            "epoch_losses": [
+                1.0017,
+                0.5404,
+                0.4747,
+                0.4362,
+                0.3916
+            ],
+            "final_acc": 0.8595
+        },
+        "accum_64x4": {
+            "epoch_losses": [
+                1.0017,
+                0.54,
+                0.4743,
+                0.4349,
+                0.3921
+            ],
+            "final_acc": 0.8615
+        }
+    },
+    "checkpoint_resume_history": [
+        {
+            "epoch": 1,
+            "phase": "before_interrupt",
+            "loss": 0.8271,
+            "acc": 0.7925
+        },
+        {
+            "epoch": 2,
+            "phase": "before_interrupt",
+            "loss": 0.4836,
+            "acc": 0.842
+        },
+        {
+            "epoch": 3,
+            "phase": "before_interrupt",
+            "loss": 0.4114,
+            "acc": 0.8625
+        },
+        {
+            "epoch": 4,
+            "phase": "resumed",
+            "loss": 0.373,
+            "acc": 0.8715
+        },
+        {
+            "epoch": 5,
+            "phase": "resumed",
+            "loss": 0.3491,
+            "acc": 0.859
+        },
+        {
+            "epoch": 6,
+            "phase": "resumed",
+            "loss": 0.3325,
+            "acc": 0.873
+        }
+    ]
+}
