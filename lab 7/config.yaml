@@ -1,0 +1,30 @@
+experiment:
+  student_name: "Viktor Honchar"
+  student_id: 72014
+  seed: 72014
+
+data:
+  data_dir: "./data"
+  batch_size: 128
+  subset_size: 20000  # Set to null to train on all 60,000 Fashion-MNIST images
+
+teacher:
+  epochs: 5
+  lr: 0.001
+  checkpoint_path: "results/teacher_baseline.pt"
+
+pruning:
+  unstructured_sparsities: [0.0, 0.25, 0.50, 0.75, 0.90, 0.95]
+  structured_sparsities: [0.10, 0.25, 0.50]
+  finetune_epochs: 3
+  finetune_lr: 0.0005
+
+distillation:
+  epochs: 5
+  lr: 0.001
+  temperature: 4.0
+  alpha: 0.5
+
+latency_benchmark:
+  warmup_iters: 30
+  measure_iters: 200
